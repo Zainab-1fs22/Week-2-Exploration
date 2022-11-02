@@ -1,0 +1,35 @@
+M-O-T-O 
+
+operation  -  httpRequest
+Create     -  POST
+Read       -  GET
+Update     -  PUT
+Delete     -  DELETE
+
+C-O-M-M-A-N-D-S
+
+node hello-httpServer.js -> den goto server/localhost
+nodemon script.js ==> change as "npm start" in package.json under scripts
+nodemon --save-dev ==> saves as devDependencies in json
+express --save ==> saves as dependencies in json
+
+
+R-E-S-O-U-R-C-E-S
+
+--> hello world - port assign - http server creation - hello-httpServer.js
+https://nodejs.org/en/docs/guides/getting-started-guide/
+--> CRUD wid node - express - ES6 - MongoDB
+https://zellwk.com/blog/crud-express-mongodb/
+--> how to execute api / requests with postman
+https://www.blazemeter.com/blog/how-use-postman-test-apis
+-->there’s no way to add dynamic content to an HTML file.
+What we can do, instead, is to use a template engine to generate the HTML
+EJS(embedded javascript) - app.set('view engine', 'ejs') - rendering html
+
+
+J-S-O-N 
+
+
+
+
+//  "test": "echo \"Error: no test specified\" && exit 1"

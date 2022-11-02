@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" type="text/css" href="./index.css" />
+    <script src="script.js"></script> -->
+    <title>Simple POST Form</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-size: xx-large;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+    label,
+    input[type="submit"] {
+      margin-top: 20px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Simple POST Form</h1>
+      <form>
+        <label>Number 1:</label>
+        <input id="num1" type="number" />
+        <label>Number 2:</label>
+        <input id="num2" type="number" />
+        <input type="submit" value="Add" />
+      </form>
+      <div class="result">Click Add!</div>
+    </div>
+    <script>
+      document.addEventListener("submit", sendData);
+
+      function sendData(e) {
+        e.preventDefault(); //to prevent page refresh when add is clicked
+
+        //get the value of the inputs at that instant:
+        const a = document.querySelector("#num1").value;
+        const b = document.querySelector("#num2").value;
+
+        //fetch takes 2 inputs - url endpoint & json request obj => returns promise
+        fetch("/add", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          //since our data is in json in postman
+          //data in fetch is given as content-type or else default is string
+          body: JSON.stringify({
+            a: parseInt(a),
+            b: parseInt(b),
+          }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            const { result } = data;
+            document.querySelector(
+              ".result"
+            ).innerText = `The sum is: ${result}`;
+          })
+          .catch((err) => console.log(err));
+      }
+    </script>
+  </body>
+</html>
+
+<!-- 
+Robert: Tough times never last but tough people do
+Sanmukapriya: No Comments
+Abraham Lincoln: Whatever you are, be a good one
+Zainab: Do what brings you joy
+Zainab: Follow your dreams with passion and determination
+Zainab: A stitch in time saves nine
+Zainab: Just go for it
+Zainab: Carpe Diem
+Zainab: Carpe Vinum 
+-->

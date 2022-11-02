@@ -1,0 +1,20 @@
+M-O-T-O 
+
+
+C-O-M-M-A-N-D-S
+
+node hello-httpServer.js -> den goto server/localhost
+nodemon script.js ==> change as "npm start" in package.json under scripts
+
+R-E-S-O-U-R-C-E-S
+
+--> hello world - port assign - http server creation - hello-httpServer.js
+https://nodejs.org/en/docs/guides/getting-started-guide/
+--> REST Server service for node - express - ES6
+https://www.freecodecamp.org/news/rest-api-tutorial-rest-client-rest-service-and-api-calls-explained-with-code-examples/
+--> how to execute api / requests with postman
+https://www.blazemeter.com/blog/how-use-postman-test-apis
+
+
+
+//  "test": "echo \"Error: no test specified\" && exit 1"
